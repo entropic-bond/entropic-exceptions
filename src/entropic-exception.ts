@@ -12,6 +12,7 @@ export class EntropicException<T extends ErrorCodes> extends Error {
 
 	constructor( code: T[keyof T], locale?: LocaleEntries, ...strings: string[] ) {
 		super()
+		this.localize = this.localize.bind( this )
 		this.locale = locale
 		
 		if ( !code ) {
