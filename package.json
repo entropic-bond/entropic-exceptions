@@ -1,0 +1,67 @@
+{
+  "name": "@entropic-bond/entropic-exceptions",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Library for handling exceptions",
+  "main": "lib/entropic-bond-exceptions.umd.cjs",
+  "module": "lib/entropic-bond-exceptions.js",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/entropic-bond-exceptions.js",
+      "require": "./lib/entropic-bond-exceptions.umd.cjs"
+    }
+  },
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc -p tsconfig-build.json && vite build",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entropic-bond/entropic-exceptions.git"
+  },
+  "keywords": [
+    "exception-handling"
+  ],
+  "author": "Josep Seto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/entropic-bond/entropic-exceptions/issues"
+  },
+  "homepage": "https://github.com/entropic-bond/entropic-exceptions#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^24.0.13",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.7",
+    "typescript": "^5.8.3",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "if git-branch-is master; then npm test; fi"
+    }
+  }
+}

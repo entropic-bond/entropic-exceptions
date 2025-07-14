@@ -1,0 +1,30 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"target": "ES2020", 
+		"module": "ESNext", 
+		"esModuleInterop": true,
+		"moduleResolution": "bundler",
+		"sourceMap": true,
+		"outDir": "lib",
+		"rootDir": "src/",
+		"resolveJsonModule": true,
+		"lib": [
+			"esnext"
+		],
+		"declaration": true,
+		"experimentalDecorators": true,
+		"allowJs": true,
+		"isolatedModules": true,
+		"strictNullChecks": true, // should be enabled progressively to end having all code base compliant with this rule
+		"strictPropertyInitialization": true, // should be enabled progressively to end having all code base compliant with this rule
+		"noUncheckedIndexedAccess": true, // this causes errors when accessing arrays elements without checking if they exist
+		"noImplicitOverride": true, // this causes errors when overriding methods of base classes. Annoying for React components
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitThis": true,
+		"types": [
+			"vitest/globals"
+		]
+	},
+	"include": ["./src"]
+}
