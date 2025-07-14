@@ -1,7 +1,7 @@
 {
   "name": "@entropic-bond/entropic-exceptions",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for handling exceptions",
   "main": "lib/entropic-bond-exceptions.umd.cjs",
   "module": "lib/entropic-bond-exceptions.js",
